@@ -1,6 +1,6 @@
 (function(){
   "use strict";
-  
+
   angular.module("app").controller("peopleCtrl", function($scope) {
     $scope.persons = [
     {
@@ -25,12 +25,12 @@
     };
 
     $scope.addPerson = function(person){
-      person.bioVisible = false
-      $scope.persons.push(person)
+      person.bioVisible = false;
+      $scope.persons.push(person);
     };
 
-    $scope.deletePerson = function(){
-
+    $scope.delete = function(person){
+      $scope.persons.splice($scope.people.indexOf(person), 1); 
     };
 
 

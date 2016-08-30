@@ -1,0 +1,19 @@
+<h3>This better work </h3>
+
+<div ng-app="app">
+  <div ng-controller="peopleCtrl">
+    <div ng-repeat='person in persons'>
+      <h2 ng-click="toggleBio(person)">{{ person.name }}</h2>
+      <p ng-if="person.bioVisible">
+       {{ person.bio }}
+      </p>
+      <button type="button" ng-click="deletePerson(person)">Delete</button>
+    </div>
+
+
+  <input type="text" placeholder="Name" ng-model= "person.name">
+  <input type="text" placeholder="Bio" ng-model= "person.bio">
+  <button ng-click="addPerson(person)">Add Person</button>
+  <h1>{{persons.length}}</h1>
+  </div>
+</div>
